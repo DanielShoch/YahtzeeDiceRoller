@@ -81,27 +81,82 @@ class ViewController: UIViewController {
         
         let diceArray = [#imageLiteral(resourceName: "diceShowingOne"), #imageLiteral(resourceName: "diceShowingTwo"), #imageLiteral(resourceName: "diceShowingThree"), #imageLiteral(resourceName: "diceShowingFour"), #imageLiteral(resourceName: "diceShowingFive"), #imageLiteral(resourceName: "diceShowingSix")]
         
+        // Dice One roll with an initial roll and two delay rolls
         if diceOneHighlight.alpha == 0 {
             diceOne.setImage(diceArray.randomElement(), for: .normal)
         }
-        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            if self.diceOneHighlight.alpha == 0 {
+                self.diceOne.setImage(diceArray.randomElement(), for: .normal)
+            }
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            if self.diceOneHighlight.alpha == 0 {
+                self.diceOne.setImage(diceArray.randomElement(), for: .normal)
+            }
+        }
+
+        // Dice Two roll with an initial roll and two delay rolls
         if diceTwoHighlight.alpha == 0 {
             diceTwo.setImage(diceArray.randomElement(), for: .normal)
         }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            if self.diceTwoHighlight.alpha == 0 {
+                self.diceTwo.setImage(diceArray.randomElement(), for: .normal)
+            }
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            if self.diceTwoHighlight.alpha == 0 {
+                self.diceTwo.setImage(diceArray.randomElement(), for: .normal)
+            }
+        }
         
+        // Dice Three roll with an initial roll and two delay rolls
         if diceThreeHighlight.alpha == 0 {
             diceThree.setImage(diceArray.randomElement(), for: .normal)
         }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            if self.diceThreeHighlight.alpha == 0 {
+                self.diceThree.setImage(diceArray.randomElement(), for: .normal)
+            }
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            if self.diceThreeHighlight.alpha == 0 {
+                self.diceThree.setImage(diceArray.randomElement(), for: .normal)
+            }
+        }
         
+        // Dice Four roll with an initial roll and two delay rolls
         if diceFourHighlight.alpha == 0 {
             diceFour.setImage(diceArray.randomElement(), for: .normal)
         }
-        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            if self.diceFourHighlight.alpha == 0 {
+                self.diceFour.setImage(diceArray.randomElement(), for: .normal)
+            }
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            if self.diceFourHighlight.alpha == 0 {
+                self.diceFour.setImage(diceArray.randomElement(), for: .normal)
+            }
+        }
+ 
+        // Dice Five roll with an initial roll and two delay rolls
         if diceFiveHighlight.alpha == 0 {
             diceFive.setImage(diceArray.randomElement(), for: .normal)
         }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            if self.diceFiveHighlight.alpha == 0 {
+                self.diceFive.setImage(diceArray.randomElement(), for: .normal)
+            }
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            if self.diceFiveHighlight.alpha == 0 {
+                self.diceFive.setImage(diceArray.randomElement(), for: .normal)
+            }
+        }
     }
-    
+        
     // What happens when "Reset" button is tapped
     @IBAction func resetButtonPressed(_ sender: UIButton) {
         print("Reset Button Pressed")
