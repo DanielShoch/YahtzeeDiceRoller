@@ -85,12 +85,12 @@ class ViewController: UIViewController {
         if diceOneHighlight.alpha == 0 {
             diceOne.setImage(diceArray.randomElement(), for: .normal)
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
             if self.diceOneHighlight.alpha == 0 {
                 self.diceOne.setImage(diceArray.randomElement(), for: .normal)
             }
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             if self.diceOneHighlight.alpha == 0 {
                 self.diceOne.setImage(diceArray.randomElement(), for: .normal)
             }
@@ -100,12 +100,12 @@ class ViewController: UIViewController {
         if diceTwoHighlight.alpha == 0 {
             diceTwo.setImage(diceArray.randomElement(), for: .normal)
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
             if self.diceTwoHighlight.alpha == 0 {
                 self.diceTwo.setImage(diceArray.randomElement(), for: .normal)
             }
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             if self.diceTwoHighlight.alpha == 0 {
                 self.diceTwo.setImage(diceArray.randomElement(), for: .normal)
             }
@@ -115,12 +115,12 @@ class ViewController: UIViewController {
         if diceThreeHighlight.alpha == 0 {
             diceThree.setImage(diceArray.randomElement(), for: .normal)
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
             if self.diceThreeHighlight.alpha == 0 {
                 self.diceThree.setImage(diceArray.randomElement(), for: .normal)
             }
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             if self.diceThreeHighlight.alpha == 0 {
                 self.diceThree.setImage(diceArray.randomElement(), for: .normal)
             }
@@ -130,12 +130,12 @@ class ViewController: UIViewController {
         if diceFourHighlight.alpha == 0 {
             diceFour.setImage(diceArray.randomElement(), for: .normal)
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
             if self.diceFourHighlight.alpha == 0 {
                 self.diceFour.setImage(diceArray.randomElement(), for: .normal)
             }
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             if self.diceFourHighlight.alpha == 0 {
                 self.diceFour.setImage(diceArray.randomElement(), for: .normal)
             }
@@ -145,12 +145,12 @@ class ViewController: UIViewController {
         if diceFiveHighlight.alpha == 0 {
             diceFive.setImage(diceArray.randomElement(), for: .normal)
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
             if self.diceFiveHighlight.alpha == 0 {
                 self.diceFive.setImage(diceArray.randomElement(), for: .normal)
             }
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             if self.diceFiveHighlight.alpha == 0 {
                 self.diceFive.setImage(diceArray.randomElement(), for: .normal)
             }
