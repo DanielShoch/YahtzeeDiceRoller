@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     var rollsMade: Int = 0
     
     
-    // What happens when "Roll" button is tapped
+    // What happens when "Roll" button is pressed
     @IBAction func rollButtonPressed(_ sender: UIButton) {
         
         let diceArray = [#imageLiteral(resourceName: "diceShowingOne"), #imageLiteral(resourceName: "diceShowingTwo"), #imageLiteral(resourceName: "diceShowingThree"), #imageLiteral(resourceName: "diceShowingFour"), #imageLiteral(resourceName: "diceShowingFive"), #imageLiteral(resourceName: "diceShowingSix")]
@@ -48,6 +48,12 @@ class ViewController: UIViewController {
         
         // Adding action to Max Roll Alert
         maxRollAlert.addAction(UIAlertAction(title: "Okay!", style: .default, handler: nil))
+        
+        // Creating Yahtzee Alert
+        let yahtzeeAlert = UIAlertController(title: "YAHTZEE!!", message: "Congratulations! You rolled a Yahtzee!!", preferredStyle: .alert)
+        
+        // Adding action to Yahtzee Alert
+        yahtzeeAlert.addAction(UIAlertAction(title: "Yay!", style: .default, handler: nil))
         
         // When to roll vs execute max roll alert
         if rollsMade == 3 {
@@ -131,6 +137,21 @@ class ViewController: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                 if self.diceFiveHighlight.alpha == 0 {
                     self.diceFive.setImage(diceArray.randomElement(), for: .normal)
+                }
+            }
+        }
+        
+        // Conditions for Yahtzee alert
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+            if self.rollsMade != 0 {
+                if self.diceOne.currentImage == self.diceTwo.currentImage {
+                    if self.diceOne.currentImage == self.diceThree.currentImage {
+                        if self.diceOne.currentImage == self.diceFour.currentImage {
+                            if self.diceOne.currentImage == self.diceFive.currentImage {
+                                self.present(yahtzeeAlert, animated: true)
+                            }
+                        }
+                    }
                 }
             }
         }
